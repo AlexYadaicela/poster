@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* box-sizing rule */
+*,
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+
+/* reset default styling */
+*{
+    font: inherit; 
+    padding: 0; 
+    margin: 0; 
+}
+
+:root{
+    --clr-primary-300:  #ffd700;
+    --clr-primary-400: #cf352e;  
+
+    --clr-neutral-100: hsl(0 0% 100%); 
+
+    --ff-primary: "Oswald", sans-serif; 
+    --ff-secondary: "Bebas Neue", sans-serif;
+    
+    --ff-heading: var(--ff-secondary); 
+    --ff-subheading: var(--ff-secondary); 
+    --ff-body: var(--ff-primary);
+
+    --fs-100: 0.733rem; 
+    --fs-200: 1rem; 
+    --fs-250: 1.5rem; 
+    --fs-300: 3rem; 
+    --fs-400: 3.5rem; 
+    --fs-600: 5.5rem; 
+
+    --fs-heading: var(--fs-400); 
+    --fs-subheading: var(--fs-200);
+    --fs-body: var(--fs-100); 
+}
+
+@media (min-width: 50em){
+    :root{
+        --fs-heading: var(--fs-600); 
+        --fs-subheading: var(--fs-250);
+        --fs-body: var(--fs-200); 
+    }
+}
+
+/* primary-header */
+.primary-header{
+    margin-block: 1rem; 
+}
+
+.primary-header nav ul{
+    display: flex; 
+    justify-content: center;
+}
+
+/* cover styling */
+.wrapper{ 
+    margin-inline: auto; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* slideshow-container */
+/* Position the image container (needed to position the left and right arrows) */
+.slideshow-container {
+    margin-inline: auto; 
+    position: relative;
+    width: 20rem;
+}
+  /* Hide the images by default */
+.slide {
+    display: none;
+}
+
+  /* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+  /* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+  /* Number text (1/3 etc) */
+.numbertext {
+    color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  /* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+  /* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+/* poster */
+.poster{
+    position: relative; 
+    width: 20rem; 
+}
+
+.poster  > .view{
+    display: none; 
+    color: black; 
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.poster:hover{
+    cursor: pointer;
+    opacity: 0.5; 
+}
+.poster:hover .view{
+    display: block;
+}
+
+/* utility classes */
+.grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; 
+}
+
+@media (min-width: 50em){
+    .grid{
+        grid-template-columns: repeat(3, 20rem);
+        margin-inline: auto;
+    }
+}
+
+/* general styling */
+html,
+body{
+    height: 100%;
+}
+
+body{
+    background-color: #f0ead2;
+}
+img{
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
